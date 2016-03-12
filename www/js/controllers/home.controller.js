@@ -6,7 +6,7 @@
     
     $scope.login = function(username){
       localStorageService.set('user', username);
-      ScocketIOService.emit('chat:join', { user: username });
+      SocketIOService.emit('chat:join', { user: username });
       $state.go('chat');
     };
 
