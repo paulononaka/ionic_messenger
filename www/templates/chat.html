@@ -1,0 +1,31 @@
+<ion-view title="Devsbeer">
+  <header class="bar bar-header bar-dark">
+    <h1 class="title">Devsbeer</h1>
+    <button class="button button-assertive" ng-click="leave()">Leave</button>
+  </header>
+
+  <ion-content class="has-header has-footer padding">
+
+    <ul class="list messages" ng-if="messages.length > 0">
+        <li class="item no-border message" ng-class="{ 'is-me': isMe(msg.user), 'event-message': (msg.type === 'leave' || msg.type === 'join'), 'users-message item-text-wrap': (msg.type === 'message') }" ng-repeat="msg in messages">
+          <div ng-if="msg.type === 'message'">
+            <h2>{{ msg.user }}</h2>
+            <p>{{ msg.text }}</p>
+            <small>{{ humanize(msg.time) }}</small>
+          </div>
+          <div class="msg" ng-if="msg.type === 'leave' || msg.type === 'join'">
+            <p>{{ msg.text }} <small>{{ humanize(msg.time) }}</small></p>
+          </div>
+        </li>
+    </ul>
+
+  </ion-content>
+
+  <footer class="bar bar-footer bar-dark item-input-inset has-content">
+      <label class="item-input-wrapper">
+        <input type="text" id="message" name="message" ng-model="message" placeholder="Mensagem...">
+      </label>
+      <a class="button button-icon icon ion-android-send" ng-click="sendMessage()"></a>
+  </footer>
+
+</ion-view>

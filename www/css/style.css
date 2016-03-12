@@ -1,1 +1,63 @@
 /* Empty. Add your own CSS if you like */
+
+/* Reset */
+.bar.item-input-inset .item-input-wrapper {
+  background-color: #fff;
+}
+
+/* Global Messages */
+.messages {
+  overflow: hidden;
+}
+
+.message {
+  clear: both;
+  max-width: 80%;
+  margin-bottom: 10px;
+}
+.message:last-child {
+  margin-bottom: 0;
+}
+
+/* Users Messages */
+.users-message {
+  border-radius: 10px;
+  background-color: #FBFBFB;
+  float: left;
+}
+
+.users-message h2,
+.message p {
+  text-align: left;
+}
+
+.users-message small {
+  display: block;
+  text-align: right;
+}
+
+/* Event Messages */
+.event-message {
+  float: none;
+  margin: 0 auto 10px;
+  text-align: center;
+}
+
+.event-message h2,
+.event-message p {
+  text-align: center;
+}
+
+.event-message small {
+  display: inline;
+}
+
+/* States */
+.is-me {
+  background-color: #eee;
+  float: right;
+}
+
+.no-border {
+  border: none;
+}

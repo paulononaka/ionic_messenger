@@ -1,0 +1,26 @@
+<ion-view title="Messenger">
+  <header class="bar bar-header bar-dark">
+    <h1 class="title">Messenger</h1>
+  </header>
+
+  <ion-content class="has-header padding full-scroll">
+
+    <div class="row h-full">
+      <div class="col col-center">
+        <form name="loginform">
+          <div class="list list-inset">
+            <label class="item item-input">
+              <input type="text" name="username" ng-model="username" placeholder="Username" required>
+            </label>
+          </div>
+
+          <button class="button button-dark button-block" ng-click="login(username)" ng-disabled="loginform.username.$valid === false">Entrar</button>
+
+        </form>
+      </div>
+    </div>
+
+
+  </ion-content>
+
+</ion-view>
