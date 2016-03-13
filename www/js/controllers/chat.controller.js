@@ -37,7 +37,7 @@
     };
 
     $scope.humanize = function(timestamp){
-      return moment(timestamp).format('HH:mm A');
+      return moment(timestamp).fromNow();
     };
 
     SocketIOService.on('message', function(msg){
